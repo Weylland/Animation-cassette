@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #ffeead;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 1000px;
+  position: relative;
+}
+
+#cassette {
+  width: 100%;
+}
+
+#rouageGauche {
+  position: absolute;
+  width: 100px;
+  top: 230px;
+  left: 240px;
+  z-index: -1;
+  animation: engrenageGauche 10s infinite linear;
+}
+
+#rouageDroite {
+  position: absolute;
+  width: 100px;
+  top: 230px;
+  right: 240px;
+  z-index: -1;
+  animation: engrenageDroite 10s infinite linear;
+}
+
+@keyframes engrenageGauche {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes engrenageDroite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
