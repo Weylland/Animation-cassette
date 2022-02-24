@@ -23,18 +23,18 @@ body {
 
 #rouageGauche {
   position: absolute;
-  width: 100px;
-  top: 230px;
-  left: 240px;
+  width: 10%;
+  top: 36%;
+  left: 24%;
   z-index: -1;
   animation: engrenageGauche 10s infinite linear;
 }
 
 #rouageDroite {
   position: absolute;
-  width: 100px;
-  top: 230px;
-  right: 240px;
+  width: 10%;
+  top: 36%;
+  right: 24%;
   z-index: -1;
   animation: engrenageDroite 10s infinite linear;
 }
@@ -52,6 +52,6 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
