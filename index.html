@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lecteur cassette</title>
     <link rel="stylesheet" href="./css/style.css">
+    <!-- font -->
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
 </head>
 
 <body>
@@ -15,13 +20,23 @@
         <img src="./asset/img/rouage.png" alt="" id="rouageDroite">
         <img src="./asset/img/cassette.png" alt="" id="cassette">
     </div>
-    <div>
+    <div id="control">
         <audio id="musique">
             <source src="./asset/audio/fleetwood.mp3">
         </audio>
-        <button id="play">Play</button>
-        <button id="pause">Pause</button>
-        <button id="stop">Stop</button>
+        <audio id="bouttonSon">
+            <source src="./asset/audio/button.mp3">
+        </audio>
+        <div class="btnCont">
+            <div id="play" class="btns">Play</div>
+            <div id="pause" class="btns">Pause</div>
+            <div id="stop" class="btns">Stop</div>
+        </div>
+        <div class="shadowCont">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
     <script src="./js/index.js"></script>
 </body>

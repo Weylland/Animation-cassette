@@ -8,12 +8,13 @@ body {
   height: 100vh;
   background-color: #ffeead;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 #container {
-  width: 1000px;
+  width: 800px;
   position: relative;
 }
 
@@ -27,7 +28,6 @@ body {
   top: 36%;
   left: 24%;
   z-index: -1;
-  animation: engrenageGauche 10s infinite linear;
 }
 
 #rouageDroite {
@@ -36,10 +36,13 @@ body {
   top: 36%;
   right: 24%;
   z-index: -1;
-  animation: engrenageDroite 10s infinite linear;
 }
 
-@keyframes engrenageGauche {
+.engrenageAnim {
+  animation: engrenage 10s infinite linear;
+}
+
+@keyframes engrenage {
   from {
     transform: rotate(0deg);
   }
@@ -47,11 +50,59 @@ body {
     transform: rotate(360deg);
   }
 }
-@keyframes engrenageDroite {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+#control {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+}
+
+.btnCont {
+  position: absolute;
+  left: 20px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.btnCont div {
+  background: #ffcd27;
+  border-radius: 15px;
+  border: 2px solid black;
+  width: 250px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 15px;
+  transition: 0.5s ease-in-out;
+}
+
+.shadowCont {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  z-index: -1;
+}
+
+.shadowCont div {
+  background: black;
+  border-radius: 15px;
+  width: 250px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.active {
+  transform: translateX(-20px);
 }
